@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUBHAM INFOTECH | Professional IT Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9;
+            --accent: #f97316;
+            --accent-light: #fb923c;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --success: #10b981;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 6px 12px rgba(0,0,0,0.15);
+            --card-radius: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: 60px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, var(--accent), #fff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .logo-tagline {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 2px;
+            font-weight: 300;
+        }
+        
+        .contact-header {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-header-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            padding: 8px 12px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .contact-header-item:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%), 
+                        url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background-blend-mode: multiply;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border: 2px solid transparent;
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-button:hover {
+            background: var(--accent-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .service-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .service-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+        
+        .service-body {
+            padding: 25px;
+        }
+        
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .qr-placeholder {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed var(--primary);
+        }
+        
+        .qr-placeholder i {
+            font-size: 3rem;
+            color: var(--primary);
+        }
+        
+        .service-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .action-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20px;
+            height: 200%;
+            background: rgba(255,255,255,0.3);
+            transform: rotate(30deg);
+            transition: all 0.6s;
+        }
+        
+        .action-btn:hover::after {
+            left: 120%;
+        }
+        
+        .youtube-btn {
+            background: #ff0000;
+            color: white;
+        }
+        
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: var(--card-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .contact-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .contact-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        /* About Section */
+        .about-content {
+            background: white;
+            border-radius: var(--card-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 10px;
+            background: var(--light);
+            border-radius: 8px;
+        }
+        
+        .service-item i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-col h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+            color: var(--light-gray);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            background: var(--accent);
+        }
+        
+        .copyright {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            margin-top: 30px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 99;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        /* Service Category Filter */
+        .category-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-header {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 12px 28px;
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                bottom: 80px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/918980287075" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div>
+                    <div class="logo-text">SHUBHAM INFOTECH</div>
+                    <div class="logo-tagline">Professional IT Solutions</div>
+                </div>
+            </div>
+            <div class="contact-header">
+                <div class="contact-header-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+91 8980287075</span>
+                </div>
+                <div class="contact-header-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>shubhaminfotech01@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Professional IT Services & Solutions</h1>
+            <p>We provide top-quality IT services including resume formatting, document design, and business support solutions tailored to your needs</p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>High-quality IT solutions at competitive prices with dedicated support</p>
+            </div>
+            
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">All Services</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="document">Document</button>
+                <button class="filter-btn" data-filter="government">Government</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-category="document">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="service-title">Resume Formatting</h3>
+                        <div class="service-price">30/- Rs</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Professional resume formatting that highlights your skills and experience to impress employers.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card" data-category="document">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <h3 class="service-title">Document Formatting</h3>
+                        <div class="service-price">50/- Rs</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Professional formatting for reports, proposals, and documents with consistent styling.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card" data-category="design">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h3 class="service-title">Business Card Design</h3>
+                        <div class="service-price">80/- Rs</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Professional business card designs that make a lasting impression on your clients.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="business">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+                        <h3 class="service-title">Wedding Video Photography</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Capturing your special moments with professional wedding photography and videography.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="design">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3 class="service-title">Website Designing</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Creative and responsive website designs to establish your online presence.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="government">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <h3 class="service-title">Passport & Visa Consulting</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Hassle-free assistance for new passports, renewals, and visa applications.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="business">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h3 class="service-title">Religious Tour Plan Booking</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Plan and book your religious tours with our expert assistance and arrangements.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="document">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="service-title">Research & Project Work</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Support for all college, school, and Ph.D.-level research and project work.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="design">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3 class="service-title">Card Designing</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Elegant designs for wedding cards and professional visiting cards.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="business">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-car-crash"></i>
+                        </div>
+                        <h3 class="service-title">Insurance Services</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>All types of health, personal, and motor third-party insurance coverage.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="government">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <h3 class="service-title">E-Tender Services</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Expert assistance with government work and e-tender filing processes.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="business">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <h3 class="service-title">GST Services</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Reliable services for GST registration and timely GST return filing.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="government">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-id-badge"></i>
+                        </div>
+                        <h3 class="service-title">Driving License Forms</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Assistance with new driving licenses, renewals, and duplicate applications.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="government">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-stamp"></i>
+                        </div>
+                        <h3 class="service-title">Certificate Applications</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Online forms for various certificates in Uttar Pradesh state.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="government">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-address-card"></i>
+                        </div>
+                        <h3 class="service-title">PAN Card Services</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Online application and correction services for your PAN card.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="document">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-file-powerpoint"></i>
+                        </div>
+                        <h3 class="service-title">PowerPoint Presentation</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Professional PowerPoint presentations with an accompanying CD.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="document">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="service-title">Resume & Bio Data</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Expertly prepared resumes and bio-data to showcase your profile.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="government">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3 class="service-title">PF Withdrawal</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Streamlined assistance for withdrawing your Provident Fund (PF).</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-category="business">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h3 class="service-title">Online Job Forms</h3>
+                        <div class="service-price">Inquire</div>
+                    </div>
+                    <div class="service-body">
+                        <p>Assistance with all government, private, and admission job online forms.</p>
+                        
+                        <div class="qr-container">
+                            <div class="qr-placeholder">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="service-actions">
+                            <a href="#" class="action-btn youtube-btn">
+                                <i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+                            <a href="https://wa.me/918980287075" class="action-btn whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Reach out to us for any inquiries or service requests</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Address</h3>
+                    <p>
+                        267 Vijay Laxmi Nagar<br>
+                        Silapur 261001<br>
+                        Uttar Pradesh, India
+                    </p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone Numbers</h3>
+                    <p>
+                        +91 8980287075<br>
+                        +91 9335318922
+                    </p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Address</h3>
+                    <p>shubhaminfotech01@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Company</h2>
+                <p>Learn more about our mission and values</p>
+            </div>
+            
+            <div class="about-content">
+                <h3>Professional IT Services in Silapur</h3>
+                <p>Welcome to SHUBHAM INFOTECH, your trusted partner for professional IT services based in Silapur, Uttar Pradesh. We specialize in providing high-quality solutions to help individuals and businesses achieve their goals through technology.</p>
+                
+                <p>Our mission is to deliver exceptional services with attention to detail and a commitment to quality. We ensure every project meets the highest standards of professionalism and effectiveness.</p>
+                
+                <h3 style="margin-top: 30px;">Our Services</h3>
+                <div class="services-list">
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Professional Resume Formatting</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Document Design and Formatting</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Business Card and Brochure Design</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Business Support Solutions</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Data Entry and Management</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>IT Consultation Services</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Professional Wedding Video Photography</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Website Designing</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>New Passport, Renewal, and Visa Consulting</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Religious Tour Plan Booking</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>All College, School, and Ph.D.-Level Research and Project Work</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Wedding Cards and Visiting Card Designing</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Health, Personal, and Motor Third-Party Insurance (All Types)</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Government Work (E-Tender)</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>GST Registration and GST Return Filing</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>New Driving License, Renewal, and Duplicate forms</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Character Certificate, Income Certificate, Disability (Divyang) Certificate ,Caste Certificate, and Domicile Certificate Online Form (Uttar Pradesh State Only)</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Online PAN Card Application and Correction</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>PowerPoint Presentation (PPT) with CD</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>Resume and Bio Data Preparation</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>PF Withdrawal</div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>All Government, Private, and Admission Job Online Forms </div>
+                    </div>
+                </div>
+                
+                <p>Visit us at our location in Vijay Laxmi Nagar or contact us today to discuss how we can assist you with your IT needs. Our team is ready to provide personalized solutions tailored to your requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: white;">
+                        <div class="logo-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <div class="logo-text">SHUBHAM INFOTECH</div>
+                            <div class="logo-tagline">Professional IT Solutions</div>
+                        </div>
+                    </div>
+                    <p>Providing top-quality IT services since 2015 with a focus on customer satisfaction and professional excellence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Popular Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Resume Formatting</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Document Formatting</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> GST Services</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> PAN Card Services</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Website Designing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 267 Vijay Laxmi Nagar, Silapur 261001, UP</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 8980287075</p>
+                    <p><i class="fas fa-envelope"></i> shubhaminfotech01@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 SHUBHAM INFOTECH. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Back to top button functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Service category filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const serviceCards = document.querySelectorAll('.service-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                // Show/hide cards based on filter
+                serviceCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = 1;
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = 0;
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .contact-card, .about-content');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Initialize animations
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+        
+        // Set initial state for animations
+        serviceCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s, transform 0.5s';
+        });
+        
+        document.querySelectorAll('.contact-card, .about-content').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s, transform 0.5s';
+        });
+    </script>
+</body>
+</html>

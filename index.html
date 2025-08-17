@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Shubham Infotech - Professional IT Services in Sitapur & Lucknow. Resume formatting, document design, website development, passport/visa consulting, GST services, government certificate applications & more. Affordable & reliable solutions since 2015."/>
-    <meta name="keywords" content="IT services Sitapur, resume formatting Lucknow, document design, website development, passport consultant Uttar Pradesh, GST services, government certificate application, PAN card service, driving license form, e-tender services, wedding photography"/>
-    <meta name="author" content="Shubham Infotech"/>
-    <meta name="geo.region" content="IN-UP"/>
-    <meta name="geo.placename" content="Sitapur, Lucknow"/>
-    <meta property="og:title" content="SHUBHAM INFOTECH | Professional IT Services in Uttar Pradesh"/>
-    <meta property="og:description" content="Comprehensive IT solutions including resume formatting, document design, government services, and business support in Sitapur & Lucknow."/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://www.shubhaminfotech.com"/>
-    <meta property="og:image" content="https://www.shubhaminfotech.com/images/logo-social.jpg"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <title>SHUBHAM INFOTECH | Professional IT Services</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Shubham Infotech - Professional IT Services in Sitapur &amp; Lucknow. Resume formatting, document design, website development, passport/visa consulting, GST services, government certificate applications &amp; more. Affordable &amp; reliable solutions since 2015." name="description"/>
+<meta content="IT services Sitapur, resume formatting Lucknow, document design, website development, passport consultant Uttar Pradesh, GST services, government certificate application, PAN card service Sitapur, driving license form Lucknow, e-tender services, wedding photography Sitapur" name="keywords"/>
+<meta content="Shubham Infotech" name="author"/>
+<meta content="IN-UP" name="geo.region"/>
+<meta content="Sitapur, Lucknow" name="geo.placename"/>
+<meta content="SHUBHAM INFOTECH | Professional IT Services in Uttar Pradesh" property="og:title"/>
+<meta content="Comprehensive IT solutions including resume formatting, document design, government services, and business support in Sitapur &amp; Lucknow." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.shubhaminfotech.com" property="og:url"/>
+<meta content="https://www.shubhaminfotech.com/images/logo-social.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<title>SHUBHAM INFOTECH | Professional IT Services in Sitapur & Lucknow</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
         :root {
             --primary: #2563eb;
             --primary-dark: #1d4ed8;
@@ -72,6 +72,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
         .logo {
@@ -81,15 +83,8 @@
         }
         
         .logo-icon {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--accent);
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
         }
         
         .logo-text {
@@ -114,6 +109,7 @@
             display: flex;
             gap: 20px;
             font-size: 0.9rem;
+            flex-wrap: wrap;
         }
         
         .contact-header-item {
@@ -298,22 +294,18 @@
             display: flex;
             justify-content: center;
             margin: 20px 0;
-        }
-        
-        .qr-placeholder {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
-            border-radius: 8px;
-            display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            border: 1px dashed var(--primary);
+            gap: 10px;
         }
         
-        .qr-placeholder i {
-            font-size: 3rem;
+        .upi-id {
+            font-weight: 600;
             color: var(--primary);
+            background: var(--light-gray);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
         }
         
         .service-actions {
@@ -484,6 +476,10 @@
             margin-bottom: 30px;
         }
         
+        .footer-col {
+            padding: 0 15px;
+        }
+        
         .footer-col h3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.4rem;
@@ -505,6 +501,9 @@
         .footer-col p {
             margin-bottom: 15px;
             color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
         .footer-links {
@@ -537,6 +536,7 @@
             display: flex;
             gap: 15px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         
         .social-link {
@@ -673,16 +673,61 @@
             margin-bottom: 10px;
             color: var(--accent);
         }
+        
+        /* Testimonials Section */
         .testimonial-section {
             background: #f9fafb;
             padding: 60px 20px;
+        }
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: var(--card-radius);
+            box-shadow: var(--shadow);
             text-align: center;
         }
-        .testimonial img {
-            width: 80px;
-            height: 80px;
+        .testimonial-avatar {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            margin-bottom: 15px;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 5px solid var(--light);
+            box-shadow: var(--shadow);
+        }
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        .testimonial strong {
+            display: block;
+            margin-top: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .testimonial .rating {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        
+        /* Price Note */
+        .price-note {
+            font-size: 0.8rem;
+            color: var(--gray);
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            font-style: italic;
         }
         
         /* Responsive Design */
@@ -722,6 +767,10 @@
                 width: 100%;
                 justify-content: center;
             }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
         
         @media (max-width: 576px) {
@@ -758,9 +807,26 @@
                 bottom: 80px;
                 right: 20px;
             }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-col {
+                text-align: center;
+            }
+            
+            .footer-col h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
         }
     </style>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 </head>
 <body>
 <a class="whatsapp-float" href="https://wa.me/918980287075" target="_blank">
@@ -772,9 +838,7 @@
 <header>
 <div class="container header-container">
 <div class="logo">
-<div class="logo-icon">
-<i class="fas fa-laptop-code"></i>
-</div>
+<i class="fas fa-laptop-code logo-icon"></i>
 <div>
 <div class="logo-text">SHUBHAM INFOTECH</div>
 <div class="logo-tagline">Professional IT Solutions</div>
@@ -795,7 +859,7 @@
 <section class="hero">
 <div class="container hero-content">
 <h1>Professional IT Services &amp; Solutions</h1>
-<p>We provide top-quality IT services including resume formatting, document design, and business support solutions tailored to your needs</p>
+<p>We provide top-quality IT services including resume formatting, document design, and business support solutions tailored to your needs in Sitapur and Lucknow</p>
 <a class="cta-button" href="#services">Explore Our Services</a>
 </div>
 </section>
@@ -803,7 +867,7 @@
 <div class="container">
 <div class="section-title">
 <h2>Our Services</h2>
-<p>High-quality IT solutions at competitive prices with dedicated support</p>
+<p>High-quality IT solutions at competitive prices with dedicated support in Sitapur</p>
 </div>
 <div class="category-filter">
 <button class="filter-btn active" data-filter="all">All Services</button>
@@ -813,20 +877,41 @@
 <button class="filter-btn" data-filter="business">Business</button>
 </div>
 <div class="services-grid">
+<div class="service-card" data-category="business">
+<div class="service-header">
+<div class="service-icon">
+<i class="fas fa-hashtag"></i>
+</div>
+<h3 class="service-title">Social Media Management</h3>
+<div class="service-price">₹500-5,000*</div>
+</div>
+<div class="service-body"><img alt="Social Media Management" src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVjaG5vbG9neXx8fHx8fDE2OTYwMjQ5MjY&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Boost your online presence with our Social Media Management services. We create, manage, and grow your social platforms to engage customers and build your brand effectively.</p>
+<div class="qr-container">
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
+</div>
+<div class="service-actions">
+<a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
+<i class="fab fa-youtube"></i> Watch Tutorial
+                            </a>
+<a class="action-btn whatsapp-btn" href="https://wa.me/918980287075" target="_blank">
+<i class="fab fa-whatsapp"></i> Connect on WhatsApp
+                            </a>
+</div>
+</div>
+</div>
 <div class="service-card" data-category="document">
 <div class="service-header">
 <div class="service-icon">
 <i class="fas fa-file-alt"></i>
 </div>
 <h3 class="service-title">Resume Formatting</h3>
-<div class="service-price">₹150/-</div>
+<div class="service-price">₹30-500*</div>
 </div>
-<div class="service-body">
-<p>Professional resume formatting that highlights your skills and experience to impress employers.</p>
+<div class="service-body"><img alt="Resume Formatting" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8cmVzdW1lfHx8fHx8MTY5NjAyNTAwNg&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Professional resume formatting service in Sitapur to make your CV stand out. We create ATS-friendly resumes that get you noticed by employers.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -844,14 +929,12 @@
 <i class="fas fa-file-word"></i>
 </div>
 <h3 class="service-title">Document Formatting</h3>
-<div class="service-price">₹200/-</div>
+<div class="service-price">₹50-500*</div>
 </div>
-<div class="service-body">
-<p>Professional formatting for reports, proposals, and documents with consistent styling.</p>
+<div class="service-body"><img alt="Document Formatting" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8ZG9jdW1lbnR8fHx8fHwxNjk2MDI1MDY0&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Professional document formatting for reports, assignments, and official documents. We ensure perfect formatting and professional presentation.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -869,14 +952,12 @@
 <i class="fas fa-id-card"></i>
 </div>
 <h3 class="service-title">Business Card Design</h3>
-<div class="service-price">₹300/-</div>
+<div class="service-price">₹50-500*</div>
 </div>
-<div class="service-body">
-<p>Professional business card designs that make a lasting impression on your clients.</p>
+<div class="service-body"><img alt="Business Card Design" src="https://images.unsplash.com/photo-1601931935934-17c3717239ab?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzaW5lc3MgY2FyZHx8fHx8fDE2OTYwMjUxMDY&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Custom business card designs that represent your brand professionally. Print-ready files delivered within 24 hours in Sitapur.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -894,14 +975,12 @@
 <i class="fas fa-camera-retro"></i>
 </div>
 <h3 class="service-title">Wedding Video Photography</h3>
-<div class="service-price">₹5,000/-</div>
+<div class="service-price">₹5,000-25,000*</div>
 </div>
-<div class="service-body">
-<p>Capturing your special moments with professional wedding photography and videography.</p>
+<div class="service-body"><img alt="Wedding Video Photography" src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8d2VkZGluZ3x8fHx8fDE2OTYwMjUxNjA&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Professional wedding photography and videography services in Sitapur and Lucknow. Capture your special moments beautifully.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -919,14 +998,12 @@
 <i class="fas fa-drafting-compass"></i>
 </div>
 <h3 class="service-title">Website Designing</h3>
-<div class="service-price">₹3,500/-</div>
+<div class="service-price">₹1,500-15,000*</div>
 </div>
-<div class="service-body">
-<p>Creative and responsive website designs to establish your online presence.</p>
+<div class="service-body"><img alt="Website Designing" src="https://images.unsplash.com/photo-1547658719-da2b51169166?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8d2Vic2l0ZXx8fHx8fDE2OTYwMjUxOTY&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Custom website design and development for businesses in Sitapur. Responsive, modern websites that drive results.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -944,14 +1021,12 @@
 <i class="fas fa-passport"></i>
 </div>
 <h3 class="service-title">Passport &amp; Visa Consulting</h3>
-<div class="service-price">₹800/-</div>
+<div class="service-price">₹800-2,500*</div>
 </div>
-<div class="service-body">
-<p>Hassle-free assistance for new passports, renewals, and visa applications.</p>
+<div class="service-body"><img alt="Passport &amp; Visa Consulting" src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8dHJhdmVsfHx8fHx8MTY5NjAyNTI0Mw&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Complete passport and visa assistance services in Sitapur. From application to document preparation, we handle it all.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -969,14 +1044,12 @@
 <i class="fas fa-church"></i>
 </div>
 <h3 class="service-title">Religious Tour Plan Booking</h3>
-<div class="service-price">₹1,000/-</div>
+<div class="service-price">₹1,000-5,000*</div>
 </div>
-<div class="service-body">
-<p>Plan and book your religious tours with our expert assistance and arrangements.</p>
+<div class="service-body"><img alt="Religious Tour Plan Booking" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8dG91cmlzbXx8fHx8fDE2OTYwMjUyNzI&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Complete religious tour planning services from Sitapur. We handle bookings, transportation, and accommodations.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -994,14 +1067,12 @@
 <i class="fas fa-user-graduate"></i>
 </div>
 <h3 class="service-title">Research &amp; Project Work</h3>
-<div class="service-price">₹1,500/-</div>
+<div class="service-price">₹500-8,000*</div>
 </div>
-<div class="service-body">
-<p>Support for all college, school, and Ph.D.-level research and project work.</p>
+<div class="service-body"><img alt="Research &amp; Project Work" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8cmVzZWFyY2h8fHx8fHwxNjk2MDI1MzA0&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Professional research and project work assistance for students in Sitapur. Quality work with proper citations.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1019,14 +1090,12 @@
 <i class="fas fa-pen-nib"></i>
 </div>
 <h3 class="service-title">Card Designing</h3>
-<div class="service-price">₹400/-</div>
+<div class="service-price">₹200-1,500*</div>
 </div>
-<div class="service-body">
-<p>Elegant designs for wedding cards and professional visiting cards.</p>
+<div class="service-body"><img alt="Card Designing" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGVzaWdufHx8fHx8MTY5NjAyNTMzNA&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Custom card designs for weddings, invitations, and business needs. Unique designs that make an impression.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1044,14 +1113,12 @@
 <i class="fas fa-car-crash"></i>
 </div>
 <h3 class="service-title">Insurance Services</h3>
-<div class="service-price">₹500/-</div>
+<div class="service-price">₹500-2,000*</div>
 </div>
-<div class="service-body">
-<p>All types of health, personal, and motor third-party insurance coverage.</p>
+<div class="service-body"><img alt="Insurance Services" src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aW5zdXJhbmNlfHx8fHx8MTY5NjAyNTM2NQ&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Complete insurance solutions in Sitapur - health, motor, life, and more. Get the best coverage at competitive rates.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1069,14 +1136,12 @@
 <i class="fas fa-file-signature"></i>
 </div>
 <h3 class="service-title">E-Tender Services</h3>
-<div class="service-price">₹1,200/-</div>
+<div class="service-price">₹1,200-5,000*</div>
 </div>
-<div class="service-body">
-<p>Expert assistance with government work and e-tender filing processes.</p>
+<div class="service-body"><img alt="E-Tender Services" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8ZG9jdW1lbnR8fHx8fHwxNjk2MDI1Mzk0&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Complete e-tender documentation and submission services for businesses in Sitapur and Lucknow.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1094,14 +1159,12 @@
 <i class="fas fa-money-check-alt"></i>
 </div>
 <h3 class="service-title">GST Services</h3>
-<div class="service-price">₹600/-</div>
+<div class="service-price">₹600-2,500*</div>
 </div>
-<div class="service-body">
-<p>Reliable services for GST registration and timely GST return filing.</p>
+<div class="service-body"><img alt="GST Services" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8dGF4fHx8fHx8MTY5NjAyNTQyNw&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Complete GST registration and filing services for businesses in Sitapur. Expert guidance and support.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1119,14 +1182,12 @@
 <i class="fas fa-id-badge"></i>
 </div>
 <h3 class="service-title">Driving License Forms</h3>
-<div class="service-price">₹400/-</div>
+<div class="service-price">₹400-1,000*</div>
 </div>
-<div class="service-body">
-<p>Assistance with new driving licenses, renewals, and duplicate applications.</p>
+<div class="service-body"><img alt="Driving License Forms" src="https://images.unsplash.com/photo-1558981852-426c6c22a060?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8ZHJpdmluZ3x8fHx8fDE2OTYwMjU0NTY&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Complete assistance with driving license applications, renewals, and duplicate licenses in Sitapur.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1144,14 +1205,12 @@
 <i class="fas fa-stamp"></i>
 </div>
 <h3 class="service-title">Certificate Applications</h3>
-<div class="service-price">₹300/-</div>
+<div class="service-price">₹50-800*</div>
 </div>
-<div class="service-body">
-<p>Online forms for various certificates in Uttar Pradesh state.</p>
+<div class="service-body"><img alt="Certificate Applications" src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2VydGlmaWNhdGV8fHx8fHwxNjk2MDI1NDg1&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Assistance with all types of certificate applications in Uttar Pradesh - caste, income, domicile, and more.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1169,14 +1228,12 @@
 <i class="fas fa-address-card"></i>
 </div>
 <h3 class="service-title">PAN Card Services</h3>
-<div class="service-price">₹350/-</div>
+<div class="service-price">₹150-300*</div>
 </div>
-<div class="service-body">
-<p>Online application and correction services for your PAN card.</p>
+<div class="service-body"><img alt="PAN Card Services" src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y3JlZGl0IGNhcmR8fHx8fHwxNjk2MDI1NTE3&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>PAN card application and correction services in Sitapur. Fast processing with proper documentation.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1194,14 +1251,12 @@
 <i class="fas fa-file-powerpoint"></i>
 </div>
 <h3 class="service-title">PowerPoint Presentation</h3>
-<div class="service-price">₹800/-</div>
+<div class="service-price">₹100-3,000*</div>
 </div>
-<div class="service-body">
-<p>Professional PowerPoint presentations with an accompanying CD.</p>
+<div class="service-body"><img alt="PowerPoint Presentation" src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJlc2VudGF0aW9ufHx8fHx8MTY5NjAyNTU0OQ&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Professional PowerPoint presentations for business, education, and conferences. Visually appealing slides with proper content.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1219,14 +1274,12 @@
 <i class="fas fa-user-tie"></i>
 </div>
 <h3 class="service-title">Resume &amp; Bio Data</h3>
-<div class="service-price">₹200/-</div>
+<div class="service-price">₹50-600*</div>
 </div>
-<div class="service-body">
-<p>Expertly prepared resumes and bio-data to showcase your profile.</p>
+<div class="service-body"><img alt="Resume &amp; Bio Data" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8cmVzdW1lfHx8fHx8MTY5NjAyNTU3OA&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Professional resume and biodata preparation services in Sitapur. Highlight your skills and experience effectively.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1244,14 +1297,12 @@
 <i class="fas fa-rupee-sign"></i>
 </div>
 <h3 class="service-title">PF Withdrawal</h3>
-<div class="service-price">₹700/-</div>
+<div class="service-price">₹700-2,000*</div>
 </div>
-<div class="service-body">
-<p>Streamlined assistance for withdrawing your Provident Fund (PF).</p>
+<div class="service-body"><img alt="PF Withdrawal" src="https://images.unsplash.com/photo-1604594849809-dfeddd911251?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bW9uZXl8fHx8fHwxNjk2MDI1NjA3&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Complete PF withdrawal assistance with documentation and online processing. Fast and reliable service in Sitapur.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1269,14 +1320,12 @@
 <i class="fas fa-user-plus"></i>
 </div>
 <h3 class="service-title">Online Job Forms</h3>
-<div class="service-price">₹300/-</div>
+<div class="service-price">₹300-1,000*</div>
 </div>
-<div class="service-body">
-<p>Assistance with all government, private, and admission job online forms.</p>
+<div class="service-body"><img alt="Online Job Forms" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8am9ifHx8fHx8MTY5NjAyNTYzNg&ixlib=rb-4.0.3&q=80&w=600" style="width:100%; border-radius:8px; margin-bottom:15px;"/>
+<p>Complete assistance with online job application forms for government and private sector jobs in Uttar Pradesh.</p>
 <div class="qr-container">
-<div class="qr-placeholder">
-<i class="fas fa-qrcode"></i>
-</div>
+<div class="upi-id">UPI ID: Q024811308@ybl</div>
 </div>
 <div class="service-actions">
 <a class="action-btn youtube-btn" href="https://youtube.com/channel/UCPade_-QvrQK1DReiRoS87g" target="_blank">
@@ -1289,12 +1338,13 @@
 </div>
 </div>
 </div>
+<div class="price-note">* All prices are negotiable. Kindly confirm all details through a mutual phone discussion.</div>
 </div>
 </section>
 <section class="why-choose-us">
 <div class="section-title" style="color:white;">
 <h2 style="color:white;">Why Choose Us</h2>
-<p>Delivering excellence since 2015</p>
+<p>Delivering excellence since 2015 in Sitapur and Lucknow</p>
 </div>
 <div class="why-grid">
 <div class="why-item" data-aos="fade-up">
@@ -1320,26 +1370,52 @@
 </div>
 </section>
 <section class="testimonial-section">
+<div class="container">
 <div class="section-title">
 <h2>What Our Clients Say</h2>
-<p>Real feedback from satisfied customers</p>
+<p>Real feedback from satisfied customers in Sitapur</p>
 </div>
+<div class="testimonials-container">
 <div class="testimonial" data-aos="fade-up">
-<img alt="Happy client" src="client1.jpg"/>
-<p>"Shubham Infotech transformed my business website. The service was fast, professional, and affordable!"</p>
-<strong>- Priya Sharma</strong>
+<img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=200&ixid=MnwxfDB8MXxyYW5kb218MHx8cGVyc29ufHx8fHx8MTY5NjAyNTY3Nw&ixlib=rb-4.0.3&q=80&w=200" alt="Happy client" class="testimonial-avatar"/>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<p>"Shubham Infotech transformed my business website. The service was fast, professional, and affordable! They understood exactly what I needed for my boutique in Sitapur."</p>
+<strong>- Priya Sharma, Boutique Owner</strong>
 </div>
 <div class="testimonial" data-aos="fade-up" data-aos-delay="150">
-<img alt="Happy client" src="client2.jpg"/>
-<p>"Excellent document formatting service. My resume now looks amazing and got me multiple interviews."</p>
-<strong>- Rajesh Kumar</strong>
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=200&ixid=MnwxfDB8MXxyYW5kb218MHx8cGVyc29ufHx8fHx8MTY5NjAyNTcwNg&ixlib=rb-4.0.3&q=80&w=200" alt="Happy client" class="testimonial-avatar"/>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<p>"Excellent document formatting service. My resume now looks amazing and got me multiple interviews. Their attention to detail is remarkable."</p>
+<strong>- Rajesh Kumar, Job Seeker</strong>
+</div>
+<div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+<img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=200&ixid=MnwxfDB8MXxyYW5kb218MHx8cGVyc29ufHx8fHx8MTY5NjAyNTcyOQ&ixlib=rb-4.0.3&q=80&w=200" alt="Happy client" class="testimonial-avatar"/>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+</div>
+<p>"The team helped me with my passport renewal when I was stuck. Their knowledge of the process saved me multiple trips to Lucknow. Highly recommended!"</p>
+<strong>- Neha Gupta, Travel Enthusiast</strong>
+</div>
+<div class="testimonial" data-aos="fade-up" data-aos-delay="450">
+<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=200&ixid=MnwxfDB8MXxyYW5kb218MHx8cGVyc29ufHx8fHx8MTY5NjAyNTc1Mg&ixlib=rb-4.0.3&q=80&w=200" alt="Happy client" class="testimonial-avatar"/>
+<div class="rating">
+<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+</div>
+<p>"As a small business owner in Sitapur, their GST services have been a lifesaver. They handle all my filings on time and explain everything clearly."</p>
+<strong>- Amit Singh, Business Owner</strong>
+</div>
+</div>
 </div>
 </section>
-<section class="section contact-section">
+<section class="section contact-section" id="contact">
 <div class="container">
 <div class="section-title">
 <h2>Contact Us</h2>
-<p>Reach out to us for any inquiries or service requests</p>
+<p>Reach out to us for any inquiries or service requests in Sitapur</p>
 </div>
 <div class="contact-grid">
 <div class="contact-card">
@@ -1373,16 +1449,19 @@
 </div>
 </div>
 </section>
-<section class="section">
+<section class="section" id="about">
 <div class="container">
 <div class="section-title">
 <h2>About Our Company</h2>
-<p>Learn more about our mission and values</p>
+<p>Learn more about our mission and values in Sitapur</p>
 </div>
 <div class="about-content">
 <h3>Professional IT Services in Sitapur </h3>
-<p>Welcome to SHUBHAM INFOTECH, your trusted partner for professional IT services based in Sitapur, Uttar Pradesh. We specialize in providing high-quality solutions to help individuals and businesses achieve their goals through technology.</p>
-<p>Our mission is to deliver exceptional services with attention to detail and a commitment to quality. We ensure every project meets the highest standards of professionalism and effectiveness.</p>
+<p>शुभम इंफोटेक में आपका स्वागत है – आपका अपना आईटी साथी
+सीतापुर, उत्तर प्रदेश में हम आपके लिए सिर्फ एक आईटी सर्विस प्रोवाइडर नहीं, बल्कि आपकी सफलता का भरोसेमंद साथी हैं। चाहे आपका काम छोटा हो या बड़ा, हम पूरी लगन और ईमानदारी से आपके साथ खड़े रहते हैं, ताकि तकनीक आपके लिए आसान और फायदेमंद बने।.</p>
+<p>हम मानते हैं कि हर ग्राहक हमारे लिए परिवार जैसा है। इसलिए हर प्रोजेक्ट में हम पूरी बारीकी, समय पर डिलीवरी और 100% गुणवत्ता का वादा निभाते हैं। हमारा लक्ष्य सिर्फ काम पूरा करना नहीं, बल्कि आपको ऐसा अनुभव देना है कि आप बार-बार हम पर भरोसा करें।
+
+आपका सपना, हमारा प्रयास – आइए मिलकर उसे हकीकत बनाते हैं।</p>
 <h3 style="margin-top: 30px;">Our Services</h3>
 <div class="services-list">
 <div class="service-item">
@@ -1473,6 +1552,10 @@
 <i class="fas fa-check-circle"></i>
 <div>All Government, Private, and Admission Job Online Forms </div>
 </div>
+<div class="service-item">
+<i class="fas fa-check-circle"></i>
+<div>Social Media Management</div>
+</div>
 </div>
 <p>Visit us at our location in Vijay Laxmi Nagar or contact us today to discuss how we can assist you with your IT needs. Our team is ready to provide personalized solutions tailored to your requirements.</p>
 </div>
@@ -1483,15 +1566,13 @@
 <div class="footer-grid">
 <div class="footer-col">
 <div class="logo" style="color: white;">
-<div class="logo-icon">
-<i class="fas fa-laptop-code"></i>
-</div>
+<i class="fas fa-laptop-code logo-icon"></i>
 <div>
 <div class="logo-text">SHUBHAM INFOTECH</div>
 <div class="logo-tagline">Professional IT Solutions</div>
 </div>
 </div>
-<p>Providing top-quality IT services since 2015 with a focus on customer satisfaction and professional excellence.</p>
+<p>Providing top-quality IT services since 2015 with a focus on customer satisfaction and professional excellence in Sitapur and Lucknow.</p>
 <div class="social-links">
 <a class="social-link" href="https://facebook.com/Shubhaminfotech01" target="_blank">
 <i class="fab fa-facebook-f"></i>
@@ -1505,6 +1586,9 @@
 <a class="social-link" href="https://twitter.com/Shubhaminfotec1" target="_blank">
 <i class="fab fa-twitter"></i>
 </a>
+<a class="social-link" href="https://share.google/3dR1iLx28q9xTLlB5" target="_blank">
+<i class="fas fa-map-marker-alt"></i>
+</a>
 <a class="social-link" href="https://wa.me/918980287075" target="_blank">
 <i class="fab fa-whatsapp"></i>
 </a>
@@ -1515,9 +1599,9 @@
 <ul class="footer-links">
 <li><a href="#"><i class="fas fa-chevron-right"></i> Home</a></li>
 <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-<li><a href="#"><i class="fas fa-chevron-right"></i> About Us</a></li>
-<li><a href="#"><i class="fas fa-chevron-right"></i> Contact</a></li>
-<li><a href="#"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+<li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+<li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+<li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -1539,7 +1623,8 @@
 </div>
 </div>
 <div class="copyright">
-                © 2023 SHUBHAM INFOTECH. All Rights Reserved.
+                © <span id="copyright-year"></span> SHUBHAM INFOTECH. All Rights Reserved.
+                <div class="price-note" style="color: var(--light-gray); margin-top: 10px;">* All prices are negotiable. Kindly confirm all details through a mutual phone discussion.</div>
             </div>
 </div>
 </footer>
@@ -1636,6 +1721,9 @@
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s, transform 0.5s';
         });
+        
+        // Update copyright year automatically
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>AOS.init({duration:800, once:true});</script>
